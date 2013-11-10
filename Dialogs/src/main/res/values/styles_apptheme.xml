@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="ButtonAppTheme" parent="android:Widget.Button">
+        <item name="android:background">@drawable/btn_default_holo_light</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="RadioButton.AppTheme" parent="android:Widget.CompoundButton.RadioButton">
+        <item name="android:background">@android:drawable/radiobutton_off_background</item>
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <style name="ImageButtonAppTheme" parent="android:Widget.ImageButton">
+        <item name="android:background">@drawable/btn_default_holo_light</item>
+    </style>
+
+    <style name="DialogAppTheme" parent="android:Theme.DeviceDefault.Dialog.NoActionBar.MinWidth">
+     <!--   <item name="android:windowFrame">@null</item> -->
+
+        <item name="android:background">#fff</item>
+
+       <!-- <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+         <item name="android:colorBackgroundCacheHint">@null</item>
+         <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>-->
+
+    </style>
+
+</resources>
