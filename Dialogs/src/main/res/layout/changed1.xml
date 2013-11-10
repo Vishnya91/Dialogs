@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
+        android:id="@+id/edt_text"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:hint="Some text"/>

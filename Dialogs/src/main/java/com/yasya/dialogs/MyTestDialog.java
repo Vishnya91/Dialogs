@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MyTestDialog extends CustomDialog {
+    EditText editText;
 
     public static void show(FragmentManager manager, String title,
                             int layout) {
@@ -27,7 +29,9 @@ public class MyTestDialog extends CustomDialog {
         builder.setPositiveButton(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity().getApplicationContext(), "checked", Toast.LENGTH_SHORT).show();
+                if (editText != null){
+                Toast.makeText(getActivity(), editText.getText(), Toast.LENGTH_SHORT).show();
+                }
             }
         });
         builder.setNegativeButton(new View.OnClickListener() {
@@ -51,6 +55,7 @@ public class MyTestDialog extends CustomDialog {
                     case R.id.radio1:
                         Toast.makeText(getActivity().getApplicationContext(), "radio1 checked", Toast.LENGTH_SHORT).show();
                         changeLayout(R.layout.changed1, R.id.lyt_changed);
+                        editText = (EditText)getChangedLayout().findViewById(R.id.edt_text);
                         break;
                     case R.id.radio2:
                         changeLayout(R.layout.changed2, R.id.lyt_changed);
@@ -58,5 +63,7 @@ public class MyTestDialog extends CustomDialog {
                 }
             }
         });
+
+
     }
 }

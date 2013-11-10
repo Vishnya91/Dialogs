@@ -38,6 +38,9 @@ public abstract class CustomDialog extends DialogFragment {
     public void changeLayout(int whatLayout, int whereLayout){
         builder.setNewView(whatLayout, whereLayout);
     }
+    public View getChangedLayout(){
+        return builder.getChangedRoot();
+    }
 
     protected abstract Builder build(Builder builder);
 
