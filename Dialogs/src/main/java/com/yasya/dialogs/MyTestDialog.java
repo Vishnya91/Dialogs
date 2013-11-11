@@ -63,7 +63,5 @@ public class MyTestDialog extends CustomDialog {
                 }
             }
         });
-
-
     }
 }
